@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Book Store Template, Free CSS Template, CSS Website Layout</title>
+    <meta name="keywords" content="Book Store Template, Free CSS Template, CSS Website Layout, CSS, HTML" />
+    <meta name="description" content="Book Store Template, Free CSS Template, Download CSS Website" />
+    @*<link href="templatemo_style.css" rel="stylesheet" type="text/css" />*@
+    <link href="~/Content/templatemo_style.css" rel="stylesheet" />
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+</head>
+<body>
+    <div id="templatemo_container">
+        <div id="templatemo_menu">
+            <ul>
+                <li>  @Html.ActionLink("TRANG CHU", "Index", "Admin")</li>
+                <li> @Html.ActionLink("Quan ly chu de", "Sanpham", "Admin")</li>
+                <li> @Html.ActionLink("Quan ly nha xuat ban", "Nhaxuatban", "Admin")</li>
+                <li> @Html.ActionLink("Quan ly sach", "Sach", "Admin")</li>
+            </ul>
+        </div> <!-- end of menu -->
+    </div>
+    <div class="container">
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
